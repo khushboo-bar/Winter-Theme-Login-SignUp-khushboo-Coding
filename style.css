@@ -1,0 +1,344 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Ruluko';
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    height: 100vh;
+    width: 100%;
+    background-image: url(img/christmas-desktop-zi8udwemxe8sripx.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(10px);
+    padding: 30px 50px;
+    border-radius: 10px;
+    height: 60%;
+    width: 20%;
+    border: 1px solid rgba(255, 255, 255, 0.411);
+    position: relative;
+    background-color: transparent;
+    transition: all 0.5s ease;
+    overflow: hidden;
+    z-index: 1;
+}
+
+form input::selection{
+    background-color: green !important;
+}
+
+h1{
+    color: white;
+    text-align: center;
+}
+
+.box{
+    position: relative;
+    margin: 35px 0;
+    border-bottom: 1px solid white;
+    height: 40px;
+}
+
+.box input{
+    background-color: transparent;
+    border: none;
+    width: 78%;
+    height: 50px;
+    padding: 0 10px 0px 5px;
+    color: white;
+    font-size: 13px;
+    letter-spacing: 1.5px;
+}
+
+.box input:focus{
+    outline: none;
+}
+
+.box label{
+    position: absolute;
+    top: 30%;
+    left: 5px;
+    font-size: 18px;
+    pointer-events: none;
+    color: white;
+    font-weight: 300;
+    transition: all 0.5s ease-in-out;
+}
+
+input:focus ~ label,
+input:valid ~ label{
+    top: -15%;
+    color: rgb(255, 255, 255);
+    text-shadow: black 0px 0px 5px;
+}
+
+
+ion-icon{
+    color: white;
+    position: absolute;
+    right: 8px;
+    top: 15px;
+    font-size: 20px;
+
+}
+.box img{
+    position: absolute;
+    right: 8px;
+    top: 15px;
+    cursor: pointer;
+
+}
+.eye{
+    display: none;
+}
+.eye2{
+    display: none;
+}
+.eyeCon{
+    display: none;
+}
+
+#unspan{
+    color: yellow;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+}
+#passpan{
+    color: yellow;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+}
+#emailspan{
+    color: yellow;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+}
+#conspan{
+    color: yellow;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+}
+#unspanreg{
+    color: yellow;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+}
+#passpanreg{
+    color: yellow;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+}
+
+.remember{
+    margin: 10px 0;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.remember input{
+    accent-color: green;
+    border: none;
+    cursor: pointer;
+}
+
+.remember label{
+    color: white;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+button{
+    width: 100%;
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 50px;
+    padding: 10px 0;
+    margin: 25px 0;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    letter-spacing: 1px;
+    font-size: 18px;
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+    
+}
+button span{
+    z-index: 2;
+    transition: all 1s ease;
+    font-weight: bold;
+
+}
+button:hover span{
+    color: white;
+    transition: all 1s ease;
+
+}
+button::before{
+    content: "";
+    position: absolute;
+    top: -5%;
+    left: -10%;
+    width: 120%;
+    height: 150%;
+    border-radius: 50px 50px;
+    background-color: rgba(0, 128, 0, 0.596);
+    text-shadow: black 0px 0px 5px;
+    z-index: -1;
+    transition: all 0.8s ease;
+    transform: scale(0) rotate(180deg);
+    transform-origin: left top;
+
+}
+button:hover::before{
+    transform: scale(1);
+    background-color: rgba(0, 128, 0, 0.596);
+    transition: all 0.5s ease;
+}
+button::after{
+    content: "";
+    position: absolute;
+    top: -20%;
+    right: -10%;
+    width: 120%;
+    height: 150%;
+    border-radius: 50px;
+    background-color: rgba(0, 128, 0, 0.596);
+    text-shadow: black 0px 0px 5px;
+    z-index: -1;
+    transition: all 1s ease;
+    transform: scale(0) rotate(-180deg);
+    transform-origin: right top;
+
+}
+button:hover::after{
+    transform: scale(1);
+    background-color: green;
+    transition: all 0.8s ease;
+}
+
+
+.reg{
+    display: flex;
+    gap: 5px;
+    color: white;
+    margin: 15px 0;
+}
+.reg a{
+    font-weight: 700;
+    color: white;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+.reg a:hover{
+    color: green;
+    transition: all 0.3s ease;
+    text-shadow: black 0px 0px 5px;
+}
+
+#register{
+    position: absolute;
+    text-wrap: nowrap;
+    transform: translateX(100%);
+    opacity: 0;
+    transition: opacity 0.1s ease,
+                transform 0.5s ease;
+}
+
+#login{
+    position: absolute;
+    transition: opacity 0.1s ease,
+                transform 0.5s ease;
+}
+
+
+
+.snowman{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+
+}
+.cap{
+    position: absolute;
+    left: 5%;
+    top: -30%;
+    height: 20%;
+    width: 45%;
+    z-index: 3;
+}
+
+.cap img{
+    filter: drop-shadow(1px 1px 3px #00000086);
+
+}
+.upperbody{
+    background-color: white;
+    height: 40%;
+    width: 55%;
+    top: 0;
+    left: 23%;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 2;
+    box-shadow: inset rgba(22, 22, 22, 0.418) -5px 0px 8px 2px;
+
+}
+
+.nose{
+    background-color: chocolate;
+    clip-path: polygon(9% 23%, 84% 39%, 9% 51%, 0% 38%);
+    position: absolute;
+    z-index: 8;
+    height: 30px;
+    width: 30px;
+    top: 40%;
+    left: 43%;
+    
+
+}
+
+.lowerbody{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    height: 60%;
+    width: 80%;
+    top: 35%;
+    left: 10%;
+    border-radius: 50%;
+    position: absolute;
+    box-shadow: inset rgba(22, 22, 22, 0.418) -5px 0px 10px 5px;
+
+}
+
+.snow{
+    position: absolute;
+    z-index: -1;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    background-image: url(img/snofall-unscreen.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 1;
+}
+

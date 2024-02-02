@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Santa Login</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- gf -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ruluko&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="snow"></div>
+
+
+<section id="section">
+    <!-- login -->
+        <form id="login">
+            <h1>Log In</h1>
+            <div class="box">
+                <ion-icon name="person"></ion-icon>
+                <input type="text" class="userName" maxlength="15" onclick="userName()" minlength="8" required>
+                <label for="">Username</label>
+                <p id="unspan"></p>
+            </div>
+            <div class="box">
+                <img src="img/invisible.png" width="20" class="invisible" alt="">
+                <img src="img/eye.png" width="20" class="eye" alt="">
+                <input type="password" class="passWd" maxlength="8" minlength="6" onclick="passWord()" id="pass" required>
+                <label for="">Password</label>
+                <p id="passpan"></p>
+            </div>
+
+            <div class="remember">
+                <input type="checkbox" id="check" required>
+                <label for="check">Remember Me</label>
+            </div>
+
+            <button onclick="goLogin()"><b><span>Login</span></b></button>
+
+            <div class="reg">
+                <span>Don't have an account? </span>
+                <a href="#" title="Sign Up" onclick="registerOpen()">Register</a>
+            </div>
+        </form>
+
+    <!-- register -->
+        <form id="register">
+            <h1>Register</h1>
+            <div class="box">
+                <ion-icon name="mail"></ion-icon>
+                <input type="email" class="emAil" required>
+                <label for="">Email</label>
+                <p id="emailspan"></p>
+            </div>
+            <div class="box">
+                <ion-icon name="person"></ion-icon>
+                <input type="text" class="userNameReg" onclick="userName()" maxlength="15" minlength="8" required>
+                <label for="">Username</label>
+                <p id="unspanreg"></p>
+            </div>
+            <div class="box">
+                <img src="img/invisible.png" width="20" class="invisible2" alt="">
+                <img src="img/eye.png" width="20" class="eye2" alt="">
+                <input type="password" class="passWdReg" onclick="passWord()" maxlength="10" minlength="6" id="passReg" required>
+                <label for="">Password</label>
+                <p id="passpanreg"></p>
+            </div>
+            <div class="box">
+                <img src="img/invisible.png" width="20" class="invisibleCon" alt="">
+                <img src="img/eye.png" width="20" class="eyeCon" alt="">
+                <input type="password" id="conPass" maxlength="10" minlength="6" class="conpass" required>
+                <label for="">Confirm Password</label>
+                <p id="conspan"></p>
+            </div>
+
+            <div class="remember">
+                <input type="checkbox" id="checkb" required>
+                <label for="checkb">Remember Me</label>
+            </div>
+
+            <button onclick="goRegister()"><b><span>Register</span></b></button>
+
+            <div class="reg">
+                <span>Already have an account? </span>
+                <a href="#" title="Log In" onclick="loginOpen()">Log In</a>
+            </div>
+        </form>
+</section>  
+
+<div class="snow-container" style="position: absolute; height: 30%; width: 10%; top: 10%; left: 30%;">
+    <div class="snowman" style="position: relative; height: 100%; width: 100%;">
+        <div class="cap">
+            <img src="img/hat.png" width="95" alt="">
+        </div>
+        <div class="upperbody">
+            <div class="eye" style="display: flex; justify-content: space-evenly; gap: 5px; top: 35%; position: absolute; z-index: 8; width: 100%;">
+                <div class="eyedot" style="width: 9px; border-radius: 50%; height: 9px; background-color: black;"></div>
+                <div class="eyedot" style="width: 9px; border-radius: 50%; height: 9px; background-color: black;"></div>
+            </div>
+            <div class="nose"></div>
+            <div class="mouth" style="position: absolute; z-index: 9; top: 55%; left: 40%;">
+                <img src="img/sm.png" width="15" alt="">
+            </div>
+
+            <div class="scraf" style="position: absolute; left: -5%; top: 68%;">
+                <img src="img/scarf.png" width="80" alt="">
+            </div>
+        </div>
+        <div class="lowerbody">
+            <img src="img/menu.png" width="60" alt="">
+        </div>
+    </div>
+</div>
+
+
+
+    <!-- js -->
+    <script src="script.js"></script>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
